@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="ramasatriafb.dicoding.ourmoviesapp.DetailMovieActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="horizontal">
+
+            <!--Menampilkan data gambar poster dengan ImageView-->
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:id="@+id/img_poster"
+                        android:layout_width="130dp"
+                        android:layout_height="200dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <!--Menampilkan data judul film dengan TextView-->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/img_poster"
+                        android:text="@string/title"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!--Menampilkan data tanggal rilis film dengan TextView-->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/txt_releaseDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:maxLines="3"
+                            android:text="@string/releaseDate"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+                </TableRow>
+
+                <!--Menampilkan data genre film dengan TextView-->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/txt_genre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_releaseDate"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/img_poster"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/genre"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGenre" />
+                </TableRow>
+
+
+                <!--Menampilkan data rating film dengan TextView-->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/txt_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/rating"
+                        android:textColor="@color/colorRating"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:text="@string/synopsis"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <!--Menampilkan Synopsis Movie-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/synopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!--Menampilkan data gambar poster dengan ImageView-->
+    <ImageView
+        android:id="@+id/img_poster"
+        android:contentDescription="Poster"
+        android:layout_width="120dp"
+        android:layout_height="170dp"/>
+
+    <!--Menampilkan data judul film dengan TextView-->
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@id/img_poster"
+        android:text="@string/title"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!--Menampilkan data tanggal rilis film dengan TextView-->
+    <TextView
+        android:id="@+id/txt_releaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_title"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/img_poster"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:text="@string/releaseDate" />
+
+    <!--Menampilkan data genre film dengan TextView-->
+    <TextView
+        android:id="@+id/txt_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_releaseDate"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/img_poster"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="@color/colorGenre"
+        android:text="@string/genre" />
+
+    <!--Menampilkan data rating film dengan TextView-->
+    <TextView
+        android:id="@+id/txt_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_genre"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/img_poster"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/colorRating"
+        android:text="@string/rating" />
+
+</RelativeLayout>
